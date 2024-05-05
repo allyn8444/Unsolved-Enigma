@@ -87,7 +87,6 @@ nav form button img {
   font-size: 96px;
 }
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 100vw;
   height: 100vh;
@@ -279,58 +278,41 @@ nav form button img {
   }
 }
 
-.banner-li img {
-  display: block;
-  width: 100%;
-}
-
 .banner-section {
   width: 100%;
   overflow: hidden;
 }
-
-.banner-article {
+.banner-section .banner-article {
   display: flex;
   width: 200%;
   animation: bannermove 30s linear infinite;
 }
-
-.banner-article.paused {
-  animation-play-state: paused;
-}
-
-.banner-div {
+.banner-section .banner-article .banner-div {
   width: 100%;
 }
-
-.banner-ul {
+.banner-section .banner-article .banner-div .banner-ul {
   display: flex;
-  background: red;
+  background-color: #EDD9A9;
   list-style-type: none;
   padding-left: 0;
   margin: 0;
 }
-
-.banner-li {
+.banner-section .banner-article .banner-div .banner-ul .banner-li {
   width: 100%;
-  background: blue;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.banner-li:nth-child(2) {
-  background: green;
+.banner-section .banner-article .banner-div .banner-ul .banner-li .banner-li img {
+  display: block;
+  width: 100%;
 }
-
-.banner-li:nth-child(3) {
-  background: yellow;
-}
-
-.banner-section:hover .banner-article {
+.banner-section .banner-article.paused {
   animation-play-state: paused;
 }
-
+.banner-section .banner-section:hover .banner-article {
+  animation-play-state: paused;
+}
 @keyframes bannermove {
   0% {
     transform: translateX(0);
@@ -338,4 +320,49 @@ nav form button img {
   100% {
     transform: translateX(-50%);
   }
+}
+
+.about-us {
+  background-color: #1E1C1C;
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: white;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+}
+.about-us div {
+  display: flex;
+}
+.about-us div span {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "UnifrakturMaguntia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 128px;
+  color: #EDD9A9;
+}
+.about-us div .about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.about-us div .about-content button {
+  margin-top: 1.5rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  background-color: #EDD9A9;
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px 12px;
 }/*# sourceMappingURL=styles.css.map */

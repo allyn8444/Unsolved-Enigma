@@ -137,8 +137,6 @@ nav {
 }
 
 
-
-
 // CREATURE - SLIDER 
 
 @mixin slider-image($url) {
@@ -151,8 +149,6 @@ nav {
     background-size: cover;
 }
 
-
-/* Slideshow container */
 .slideshow-container {
     max-width: 100vw;
     height: 100vh; // TODO: make fit content in responsive?
@@ -362,68 +358,111 @@ nav {
 
 
 // CATEGORIES - SLIDER 
-
-
-
-.banner-li img {
-    display: block;
-    width: 100%;
-}
-
 .banner-section {
     width: 100%;
     overflow: hidden;
+
+    .banner-article {
+        display: flex;
+        width: 200%;
+        animation: bannermove 30s linear infinite;
+
+
+        .banner-div {
+            width: 100%;
+
+
+            .banner-ul {
+                display: flex;
+                // background: red;
+                background-color: $old-paper;
+                list-style-type: none;
+                padding-left: 0;
+                margin: 0;
+
+
+                .banner-li {
+                    width: 100%;
+                    // background: blue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .banner-li img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // 
+    .banner-article.paused {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+    }
+
+    .banner-section:hover .banner-article {
+        animation-play-state: paused;
+    }
+
+    @keyframes bannermove {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
 }
 
-.banner-article {
-    display: flex;
-    width: 200%;
-    animation: bannermove 30s linear infinite;
-}
 
-.banner-article.paused {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-}
 
-.banner-div {
-    width: 100%;
-}
-
-.banner-ul {
-    display: flex;
-    background: red;
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-.banner-li {
-    width: 100%;
-    background: blue;
+// ABOUT US SECTION
+.about-us {
+    background-color: $black;
+    @include old_standard_font($size: 20);
+    color: white;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    padding: 0 3rem;
 
-.banner-li:nth-child(2) {
-    background: green;
-}
+    // padding: 4rem 2rem;
 
-.banner-li:nth-child(3) {
-    background: yellow;
-}
+    div {
+        display: flex;
 
-.banner-section:hover .banner-article {
-    animation-play-state: paused;
-}
+        span {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include unifraktur_font($size: 128);
+            color: $old-paper;
+        }
 
-@keyframes bannermove {
-    0% {
-        transform: translateX(0);
+        .about-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+
+
+            button {
+                margin-top: 1.5rem;
+                max-width: fit-content;
+                background-color: $old-paper ;
+                @include old_standard_font($size: 15);
+                border-radius: 5px;
+                padding: 5px 12px;
+            }
+        }
+
     }
 
-    100% {
-        transform: translateX(-50%);
-    }
 }
