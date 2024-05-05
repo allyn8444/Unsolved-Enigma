@@ -1,0 +1,429 @@
+// FONTS:
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.cdnfonts.com/css/coluna');
+
+// CSS RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+
+// COLORS
+$nav-text: #F5F5F5;
+$hero-text: #DAD8D4;
+$old-paper: #EDD9A9;
+$black: #1E1C1C;
+$slider-title: #F1EEE6;
+
+
+main {
+    background-color: $black;
+}
+
+// DYNAMIC FONTS
+@mixin old_standard_font($weight: 400, $size: 16, $style: normal) {
+    font-family: "Old Standard TT", serif;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: #{$size}px;
+}
+
+@mixin unifraktur_font($weight: 400, $size: 16, $style: normal) {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: #{$size}px;
+}
+
+
+
+// NAVBAR
+nav {
+    display: flex;
+    align-items: center;
+    // background-color: pink;
+    padding: 0 5rem;
+    height: 15vh;
+    @include old_standard_font();
+    // border: 1px solid white; // remove later
+
+
+    ul {
+        text-decoration: none;
+        margin: 0 auto;
+
+
+        li {
+            display: inline;
+            margin: 0 14px;
+
+            a {
+                text-decoration: none;
+                color: $nav-text;
+
+            }
+        }
+
+    }
+
+    form {
+
+        display: flex;
+        align-items: center;
+        align-items: stretch;
+        max-width: 500px;
+        padding: 5px;
+        background-color: $old-paper;
+        border-radius: 10px;
+
+        input {
+            background-color: $old-paper;
+            height: 30px;
+            padding: 0 0 0 10px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            background-color: $old-paper;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                border-left: 2px solid $black;
+                padding: 0 8px;
+            }
+        }
+    }
+}
+
+// HERO
+.hero {
+    height: 85vh;
+    color: $hero-text;
+    @include unifraktur_font();
+    // background-color: red;
+
+    div {
+        // background-color: yellowgreen;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            // background-color: skyblue;
+            width: 980px;
+            font-size: 128px;
+
+            span {
+                &:nth-child(2) {
+                    font-size: 96px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+// CREATURE - SLIDER 
+
+@mixin slider-image($url) {
+    background-image: url($url);
+
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100vw;
+    height: 100vh; // TODO: make fit content in responsive?
+    position: relative;
+    margin: auto;
+    // background-color: red;
+
+
+    .mySlides {
+
+        display: none;
+
+        &:nth-child(1) {
+            @include slider-image("/images/chupacabra.png");
+        }
+
+        &:nth-child(2) {
+            @include slider-image("/images/anabelle.png");
+        }
+
+        &:nth-child(3) {
+            @include slider-image("/images/axeman.png");
+        }
+
+        &:nth-child(4) {
+            @include slider-image("/images/maryceleste.png");
+        }
+
+        &:nth-child(5) {
+            @include slider-image("/images/bellwitch.png");
+        }
+
+
+        .slider-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            // text-align: center;
+            color: white;
+
+            // background-color: skyblue;
+
+            div {
+                display: flex;
+                justify-content: space-between;
+
+                .slider-title {
+
+                    display: inline-block;
+                    text-align: start;
+                    // width: 525px;
+                    max-width: 600px;
+                    max-height: 470px;
+                    // background-color: red;
+                    margin-left: 2rem;
+                    font-family: 'Coluna', sans-serif;
+                    color: $slider-title;
+                    font-size: 250px;
+                    word-wrap: break-word;
+                    line-height: 1;
+                }
+
+                .content-right {
+
+                    display: inline-block;
+                    width: 525px;
+                    background: rgba(0, 0, 0, 0.37);
+                    border-radius: 10px 0 0 10px;
+                    border: 1px rgba(0, 0, 0, 0.22) solid;
+                    backdrop-filter: blur(7.20px);
+                    padding: 70px 50px;
+                    word-wrap: break-word;
+
+
+                    .slider-subtitle {
+                        @include old_standard_font($size: 40);
+                    }
+
+                    p {
+                        @include old_standard_font($size: 20);
+                        margin: 10px 0 40px 0;
+                    }
+
+                    .slider-buttons {
+
+                        // background-color: red;
+                        justify-content: start; // needed because it inherits parents' space-between
+                        gap: 1.5rem;
+
+                        button {
+                            @include old_standard_font($size: 15);
+                            padding: 5px 12px;
+                            border-radius: 5px;
+
+                            &:nth-child(1) {
+                                background-color: $old-paper;
+                                color: $black;
+                            }
+
+                            &:nth-child(2) {
+                                background-color: transparent;
+                                color: $old-paper;
+                                border: 1.5px solid $old-paper;
+                            }
+                        }
+                    }
+                }
+
+
+
+            }
+        }
+
+
+    }
+
+
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+    .dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 10%;
+        // background-color: red;
+        width: 125px;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #aaaaaa;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+        .prev,
+        .next,
+        .text {
+            font-size: 11px
+        }
+    }
+
+
+}
+
+
+// CATEGORIES - SLIDER 
+
+
+
+.banner-li img {
+    display: block;
+    width: 100%;
+}
+
+.banner-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-article {
+    display: flex;
+    width: 200%;
+    animation: bannermove 30s linear infinite;
+}
+
+.banner-article.paused {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.banner-div {
+    width: 100%;
+}
+
+.banner-ul {
+    display: flex;
+    background: red;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.banner-li {
+    width: 100%;
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-li:nth-child(2) {
+    background: green;
+}
+
+.banner-li:nth-child(3) {
+    background: yellow;
+}
+
+.banner-section:hover .banner-article {
+    animation-play-state: paused;
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
