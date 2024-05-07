@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <main>
+    <!-- <div class="light"></div> -->
+    <main class="black-out">
         <nav>
             <div>
                 <img src="/images/LOGO.png" alt="">
@@ -44,7 +45,7 @@
     </main>
 
     <!-- || ============= CREATURES - SLIDER ================= || -->
-    <section class="slideshow-container">
+    <section class="hidden slideshow-container">
 
         <div class="mySlides fade">
             <div class="slider-content" style="width:100%">
@@ -186,7 +187,7 @@
 
     <!-- || ============= CATEGORIES - SLIDER ================= || -->
 
-    <section class="banner-section">
+    <section class="hidden banner-section">
 
         <!-- TODO: EDIT PNG, TRIM BORDERS FOR UNIFORM SIZE -->
 
@@ -212,12 +213,12 @@
     </section>
 
     <!-- || ============= ABOUT US ================= || -->
-    <section class="about-us">
+    <section class="hidden about-us">
         <div>
             <span>About Us</span>
             <div class="about-content">
                 <div>
-                    <!-- TODO: image appear on hover -->
+
                     <img src="/images/about-us.png" alt="">
                     <p>Welcome to Whispers of the Shadow: Unsolved Enigma, a digital repository dedicated to exploring
                         the
@@ -237,7 +238,7 @@
 
 
     <!-- || ============= DISCUSSION ================= || -->
-    <section class="discussion-section">
+    <section class="hidden discussion-section">
         <h2>Discussion Hall</h2>
 
         <div class="discussion">
@@ -286,9 +287,60 @@
 
 
     <!-- || ============= FOOTER ================= || -->
-    <footer>
-        footer here
+    <footer class="hidden">
+        <section>
+            <div class="footer-head">
+                <div>
+                    <img src="/images/LOGO.png" alt="">
+                </div>
+                <div>
+                    <ul>
+                        <li><a href=""><img src="/images/socials/x.png" alt=""></a></li>
+                        <li><a href=""><img src="/images/socials/ig.png" alt=""></a></li>
+                        <li><a href=""><img src="/images/socials/linkedin.png" alt=""></a></li>
+                        <li><a href=""><img src="/images/socials/fb.png" alt=""></a></li>
+                        <li><a href=""><img src="/images/socials/yt.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-content">
+                <div>
+                    <p>Sign up to share your own experiences in our Discussion Wall</p>
 
+                    <form action="">
+                        <span class="user-name">
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Last Name">
+                        </span>
+
+                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Email Address">
+                        <input type="password" placeholder="Password">
+                        <input class="signup" type="submit" value="Sign Up">
+                    </form>
+                    <span class="login">
+                        Already have an account? <a href="">Login</a>
+                    </span>
+                </div>
+
+            </div>
+            <hr>
+            <div class="footer-foot">
+                <div class="copyright">
+                    &#169; 2024 Website Name
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="">Help & Support</a></li>
+                        <li><a href="">Privacy </a></li>
+                        <li><a href="">Copyright Policy</a></li>
+                        <li><a href="">Terms of Service</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
     </footer>
 
 
