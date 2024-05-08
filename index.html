@@ -8,51 +8,65 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
-    <!-- <div class="light"></div> -->
+<body onload="autoplayAudio()">
+    <div class="light"></div>
     <main class="black-out">
         <nav>
             <div>
-                <img src="/images/LOGO.png" alt="">
+                <img src="/assets/images/LOGO.png" alt="">
             </div>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Cases</a></li>
-                <li><a href="">Mystery</a></li>
-                <li><a href="">Discussion</a></li>
-                <li><a href="">Contact</a></li>
+            <ul class="mobile">
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="/">Cases</a></li>
+                <li><a href="#mystery">Mystery</a></li>
+                <li><a href="#discussion">Discussion</a></li>
+                <li><a href="/">Contact</a></li>
 
             </ul>
             <div class="search-container">
                 <form action="">
                     <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><img src="/images/search-icon.svg" alt=""></button>
+                    <button type="submit"><img src="/assets/images/search-icon.svg" alt=""></button>
                 </form>
             </div>
         </nav>
         <!-- HERO  -->
         <section class="hero">
+
             <div>
                 <div class="text-container">
                     <span>Whispers from the Shadows:</span>
 
                     <span>Unsolved Enigmas</span>
                 </div>
+
             </div>
+
+            <div class="seemore" style="color:white">
+                <span>
+                    See More
+                    <a href="#slider">
+                        <img src="/assets/images/arrow.png" alt="">
+                    </a>
+                </span>
+            </div>
+
+
+
         </section>
 
     </main>
 
     <!-- || ============= CREATURES - SLIDER ================= || -->
-    <section class="hidden slideshow-container">
+    <section id="slider" class=" slideshow-container">
 
         <div class="mySlides fade">
             <div class="slider-content" style="width:100%">
                 <!-- CHUPA CABRA -->
                 <div>
-                    <span class="slider-title">CHUPA CABRA</span>
-                    <div class="content-right">
+                    <span class="inView-left hidden-left slider-title">CHUPA CABRA</span>
+                    <div class="inView-right hidden-right content-right">
                         <span class="slider-subtitle">the cryptid of latin america</span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis maximus sapien,
                             eget iaculis mauris eleifend
@@ -77,8 +91,8 @@
             <div class="slider-content" style="width:100%">
                 <!-- ANA BELLE  -->
                 <div>
-                    <span class="slider-title">ANA BELLE</span>
-                    <div class="content-right">
+                    <span class="hidden-left slider-title">ANA BELLE</span>
+                    <div class="hidden-right content-right">
                         <span class="slider-subtitle">the cryptid of latin america</span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis maximus sapien,
                             eget iaculis mauris eleifend
@@ -102,8 +116,8 @@
             <div class="slider-content" style="width:100%">
                 <!-- AXE MAN -->
                 <div>
-                    <span class="slider-title">AXE MAN</span>
-                    <div class="content-right">
+                    <span class="hidden-left slider-title">AXE MAN</span>
+                    <div class="hidden-right content-right">
                         <span class="slider-subtitle">the cryptid of latin america</span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis maximus sapien,
                             eget iaculis mauris eleifend
@@ -127,8 +141,8 @@
             <div class="slider-content" style="width:100%">
                 <!-- MARY CELESTE -->
                 <div>
-                    <span class="slider-title">MARY CELESTE</span>
-                    <div class="content-right">
+                    <span class="hidden-left slider-title">MARY CELESTE</span>
+                    <div class="hidden-right content-right">
                         <span class="slider-subtitle">the cryptid of latin america</span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis maximus sapien,
                             eget iaculis mauris eleifend
@@ -152,8 +166,8 @@
             <div class="slider-content" style="width:100%">
                 <!-- BELL WITCH -->
                 <div>
-                    <span class="slider-title">BELL WITCH</span>
-                    <div class="content-right">
+                    <span class="hidden-left slider-title">BELL WITCH</span>
+                    <div class="hidden-right content-right">
                         <span class="slider-subtitle">the cryptid of latin america</span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis maximus sapien,
                             eget iaculis mauris eleifend
@@ -187,24 +201,22 @@
 
     <!-- || ============= CATEGORIES - SLIDER ================= || -->
 
-    <section class="hidden banner-section">
-
-        <!-- TODO: EDIT PNG, TRIM BORDERS FOR UNIFORM SIZE -->
+    <section id="mystery" class="banner-section">
 
         <article class="banner-article">
             <div class="banner-div">
                 <ul class="banner-ul">
-                    <li class="banner-li"><img src="/images/categories/conspiracy-theories.png" /></li>
-                    <li class="banner-li"><img src="/images/categories/cryptids-legends.png" /></li>
-                    <li class="banner-li"><img src="/images/categories/cursed-obj-places.png" /></li>
+                    <li class="banner-li"><img src="/assets/images/categories/conspiracy-theories.png" /></li>
+                    <li class="banner-li"><img src="/assets/images/categories/cryptids-legends.png" /></li>
+                    <li class="banner-li"><img src="/assets/images/categories/cursed-obj-places.png" /></li>
                     <!-- <li class="banner-li"><img src="/images/categories/" /></li> -->
                 </ul>
             </div>
             <div class="banner-div">
                 <ul class="banner-ul">
-                    <li class="banner-li"><img src="/images/categories/historical-mysteries.png" /></li>
-                    <li class="banner-li"><img src="/images/categories/paranormal.png" /></li>
-                    <li class="banner-li"><img src="/images/categories/unsolved-crimes.png" /></li>
+                    <li class="banner-li"><img src="/assets/images/categories/historical-mysteries.png" /></li>
+                    <li class="banner-li"><img src="/assets/images/categories/paranormal.png" /></li>
+                    <li class="banner-li"><img src="/assets/images/categories/unsolved-crimes.png" /></li>
                     <!-- <li class="banner-li"><img src="/images/categories/" /></li> -->
                 </ul>
             </div>
@@ -213,13 +225,13 @@
     </section>
 
     <!-- || ============= ABOUT US ================= || -->
-    <section class="hidden about-us">
+    <section id="about" class="hidden about-us">
         <div>
-            <span>About Us</span>
-            <div class="about-content">
+            <span class="inView-left">About Us</span>
+            <div class="inView-y about-content">
                 <div>
 
-                    <img src="/images/about-us.png" alt="">
+                    <img src="/assets/images/about-us.png" alt="">
                     <p>Welcome to Whispers of the Shadow: Unsolved Enigma, a digital repository dedicated to exploring
                         the
                         mysteries that lurk
@@ -238,10 +250,10 @@
 
 
     <!-- || ============= DISCUSSION ================= || -->
-    <section class="hidden discussion-section">
+    <section id="discussion" class="discussion-section">
         <h2>Discussion Hall</h2>
 
-        <div class="discussion">
+        <div class="inView-y discussion">
             <span class="disc-sender">~japjapchildluver</span>
             <h3 class="disc-title">ive been keeping this secret for a long time</h3>
             <p>
@@ -262,7 +274,7 @@
 
         </div>
         <!--  -->
-        <div class="discussion">
+        <div class="inView-y discussion">
             <span class="disc-sender">~japjapchildluver</span>
             <h3 class="disc-title">ive been keeping this secret for a long time</h3>
             <p>
@@ -287,24 +299,24 @@
 
 
     <!-- || ============= FOOTER ================= || -->
-    <footer class="hidden">
+    <footer>
         <section>
             <div class="footer-head">
                 <div>
-                    <img src="/images/LOGO.png" alt="">
+                    <img src="/assets/images/LOGO.png" alt="">
                 </div>
                 <div>
                     <ul>
-                        <li><a href=""><img src="/images/socials/x.png" alt=""></a></li>
-                        <li><a href=""><img src="/images/socials/ig.png" alt=""></a></li>
-                        <li><a href=""><img src="/images/socials/linkedin.png" alt=""></a></li>
-                        <li><a href=""><img src="/images/socials/fb.png" alt=""></a></li>
-                        <li><a href=""><img src="/images/socials/yt.png" alt=""></a></li>
+                        <li><a href=""><img src="/assets/images/socials/x.png" alt=""></a></li>
+                        <li><a href=""><img src="/assets/images/socials/ig.png" alt=""></a></li>
+                        <li><a href=""><img src="/assets/images/socials/linkedin.png" alt=""></a></li>
+                        <li><a href=""><img src="/assets/images/socials/fb.png" alt=""></a></li>
+                        <li><a href=""><img src="/assets/images/socials/yt.png" alt=""></a></li>
                     </ul>
                 </div>
             </div>
             <hr>
-            <div class="footer-content">
+            <div class="inView-y footer-content">
                 <div>
                     <p>Sign up to share your own experiences in our Discussion Wall</p>
 
@@ -339,9 +351,13 @@
 
                     </ul>
                 </div>
+                <!-- BGM -->
+                <audio id="bgm" src="/assets/audio/bgm.mp3">
+                </audio>
             </div>
         </section>
     </footer>
+
 
 
 
