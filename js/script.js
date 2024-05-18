@@ -42,8 +42,6 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 
-
-
 }
 
 // =========================== ABOUT PAGE ================ \\
@@ -61,7 +59,6 @@ aboutContent.addEventListener("mouseenter", () => {
 aboutContent.addEventListener("mouseleave", () => {
     aboutImg.classList.remove("show-img")
 })
-
 
 
 

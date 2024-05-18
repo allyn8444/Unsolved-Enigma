@@ -1,0 +1,58 @@
+// =========================== SASS PARTIALS ====================== \\
+
+// FONTS:
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.cdnfonts.com/css/coluna');
+
+// CSS RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+// COLORS
+$white-text: #F5F5F5;
+$hero-text: #DAD8D4;
+$old-paper: #EDD9A9;
+$black: #1E1C1C;
+$slider-title: #F1EEE6;
+
+
+
+
+// MIXINS
+@mixin old_standard_font($weight: 400, $size: 16, $style: normal) {
+    font-family: "Old Standard TT", serif;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: #{$size}px;
+}
+
+@mixin unifraktur_font($weight: 400, $size: 16, $style: normal) {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: #{$size}px;
+}

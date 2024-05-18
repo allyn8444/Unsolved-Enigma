@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=UnifrakturMaguntia&display=swap");
+@import url("https://fonts.cdnfonts.com/css/coluna");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: #1e1c1c;
+}
+
+.categories-bg {
+  width: 100%;
+  min-height: 400px;
+  background-image: url("/assets/images/categories-bg.png");
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.categories-bg h1 {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 85px;
+  text-align: center;
+}
+.categories-bg a {
+  position: absolute;
+  filter: invert(1);
+}
+.categories-bg a img {
+  max-width: 50px;
+}
+.categories-bg .to-home {
+  transform: rotate(180deg);
+  top: 3rem;
+  left: 0.2rem;
+}
+.categories-bg .to-content {
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  animation: animate 2s ease-in-out infinite;
+}
+
+.sections {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  margin: 2.5rem 0;
+}
+.sections .left {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sections .right {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sections img {
+  max-width: 350px;
+}
+
+.s1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.s2 {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.s3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(-50%) translateY(0);
+    /* Maintain horizontal centering */
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+    /* Move up while maintaining centering */
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+    /* Return to start position */
+  }
+}
+@media only screen and (min-width: 768px) {
+  .categories-bg {
+    height: 100vh;
+  }
+  .categories-bg h1 {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 150px;
+  }
+  .categories-bg a {
+    position: absolute;
+    filter: invert(1);
+  }
+  .categories-bg a img {
+    max-width: 100px;
+  }
+  .categories-bg .to-home {
+    transform: rotate(180deg);
+    top: 6rem;
+    left: 1rem;
+  }
+  .categories-bg .to-content {
+    left: 50%;
+    bottom: 6rem;
+    transform: translateX(-50%);
+    animation: animate 2s ease-in-out infinite;
+  }
+  .sections img {
+    max-width: 300px;
+  }
+  .s1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .s2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .s3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .sections img {
+    max-width: 500px;
+  }
+}/*# sourceMappingURL=categories.css.map */
