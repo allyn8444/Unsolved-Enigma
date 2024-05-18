@@ -1,8 +1,7 @@
-// autoplay audio
-function autoplayAudio() {
-    document.querySelector('#bgm').play();
-}
 
+// play bgm
+const audio = new Audio('/assets/audio/bgm.mp3');
+audio.play();
 
 // =============== LIGHT EFFECTS ============= \\
 let pos = document.documentElement;

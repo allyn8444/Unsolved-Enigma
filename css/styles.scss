@@ -160,7 +160,6 @@ main {
     filter: blur(0);
     transform: translateY(0);
     transform: translateX(0);
-
 }
 
 
@@ -172,6 +171,8 @@ main {
         transition: none;
     }
 }
+
+
 
 // ======================= MEDIA QUERIES (RESPONSIVE) =========================== \\
 
@@ -311,7 +312,7 @@ main {
         position: relative;
         margin: auto;
         background-color: black;
-
+        color: $white-text;
 
         .mySlides {
 

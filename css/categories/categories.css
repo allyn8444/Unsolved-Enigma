@@ -29,7 +29,34 @@ body {
   background-color: #1e1c1c;
 }
 
-.categories-bg {
+.hidden-left {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translateX(-100%);
+}
+
+.hidden-right {
+  opacity: 0;
+  transition: all 1s ease 0.5s;
+  filter: blur(5px);
+  transform: translateX(100%);
+}
+
+.show-view {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduce-motion) {
+  .hidden-right,
+  .hidden-left {
+    transition: none;
+  }
+}
+.bg {
   width: 100%;
   min-height: 400px;
   background-image: url("/assets/images/categories-bg.png");
@@ -41,35 +68,83 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 1rem;
 }
-.categories-bg h1 {
-  font-family: "UnifrakturMaguntia", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 85px;
+.bg h1 {
   text-align: center;
+  color: black;
 }
-.categories-bg a {
+.bg a {
   position: absolute;
   filter: invert(1);
 }
-.categories-bg a img {
+.bg a img {
   max-width: 50px;
 }
-.categories-bg .to-home {
+.bg .to-home {
   transform: rotate(180deg);
   top: 3rem;
   left: 0.2rem;
 }
-.categories-bg .to-content {
+.bg .to-content {
   left: 50%;
   bottom: 3rem;
   transform: translateX(-50%);
   animation: animate 2s ease-in-out infinite;
 }
 
+@media only screen and (min-width: 768px) {
+  .bg {
+    height: 100vh;
+  }
+  .bg h1 {
+    animation: title-fade 4s ease;
+  }
+  .bg a {
+    position: absolute;
+  }
+  .bg a img {
+    max-width: 100px;
+  }
+  .bg .to-home {
+    transform: rotate(180deg);
+    top: 6rem;
+    left: 1rem;
+  }
+  .bg .to-content {
+    left: 50%;
+    bottom: 6rem;
+    transform: translateX(-50%);
+    animation: animate 2s ease-in-out infinite;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+@keyframes title-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h1 {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 85px;
+}
+
 .sections {
+  overflow-x: hidden;
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
@@ -101,6 +176,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 4rem;
 }
 
 .s2 {
@@ -119,47 +195,12 @@ body {
   flex-wrap: wrap;
 }
 
-@keyframes animate {
-  0% {
-    transform: translateX(-50%) translateY(0);
-    /* Maintain horizontal centering */
-  }
-  50% {
-    transform: translateX(-50%) translateY(-20px);
-    /* Move up while maintaining centering */
-  }
-  100% {
-    transform: translateX(-50%) translateY(0);
-    /* Return to start position */
-  }
-}
 @media only screen and (min-width: 768px) {
-  .categories-bg {
-    height: 100vh;
-  }
-  .categories-bg h1 {
+  h1 {
     font-family: "UnifrakturMaguntia", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 150px;
-  }
-  .categories-bg a {
-    position: absolute;
-    filter: invert(1);
-  }
-  .categories-bg a img {
-    max-width: 100px;
-  }
-  .categories-bg .to-home {
-    transform: rotate(180deg);
-    top: 6rem;
-    left: 1rem;
-  }
-  .categories-bg .to-content {
-    left: 50%;
-    bottom: 6rem;
-    transform: translateX(-50%);
-    animation: animate 2s ease-in-out infinite;
   }
   .sections img {
     max-width: 300px;

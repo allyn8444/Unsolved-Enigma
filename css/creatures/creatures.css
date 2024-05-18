@@ -1,1 +1,296 @@
-/*# sourceMappingURL=creatures.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=UnifrakturMaguntia&display=swap");
+@import url("https://fonts.cdnfonts.com/css/coluna");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.bg {
+  width: 100%;
+  min-height: 400px;
+  background-image: url(" ");
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.bg h1 {
+  text-align: center;
+  color: white;
+}
+.bg a {
+  position: absolute;
+  filter: invert(0);
+}
+.bg a img {
+  max-width: 50px;
+}
+.bg .to-home {
+  transform: rotate(180deg);
+  top: 3rem;
+  left: 0.2rem;
+}
+.bg .to-content {
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  animation: animate 2s ease-in-out infinite;
+}
+
+@media only screen and (min-width: 768px) {
+  .bg {
+    height: 100vh;
+  }
+  .bg h1 {
+    animation: title-fade 4s ease;
+  }
+  .bg a {
+    position: absolute;
+  }
+  .bg a img {
+    max-width: 100px;
+  }
+  .bg .to-home {
+    transform: rotate(180deg);
+    top: 6rem;
+    left: 1rem;
+  }
+  .bg .to-content {
+    left: 50%;
+    bottom: 6rem;
+    transform: translateX(-50%);
+    animation: animate 2s ease-in-out infinite;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+@keyframes title-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h1 {
+  font-family: "Coluna", sans-serif;
+  color: #F1EEE6;
+  font-size: 18vw;
+  text-align: center;
+}
+
+.title-banner {
+  background-color: #1E1C1C;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-banner h2 {
+  color: #EDD9A9;
+  font-family: "UnifrakturMaguntia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  padding: 30px 0;
+}
+
+.tertile {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  background-color: #F1EEE6;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.tertile p {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+}
+.tertile p span {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+}
+.tertile .a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tertile .b {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tertile .b img {
+  margin: 2rem 0;
+  min-width: 50px;
+}
+.tertile .c {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.information {
+  background-color: #030303;
+  color: #F5F5F5;
+  padding: 4rem 4rem 5rem 4rem;
+  position: relative;
+}
+.information h3 {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  margin-bottom: 2rem;
+}
+.information p {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+.information .more {
+  display: none;
+}
+.information .seemore {
+  position: absolute;
+  cursor: pointer;
+  left: 50%;
+  bottom: 0.8rem;
+  transform: translateX(-50%);
+}
+.information .seemore span {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.information .seemore span button {
+  background: none;
+  border: none;
+}
+.information .seemore span img {
+  width: 2rem;
+  transform: rotate(90deg);
+}
+
+@media only screen and (min-width: 768px) {
+  .title-banner h2 {
+    padding: 52px 0;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 96px;
+  }
+  .tertile {
+    display: flex;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .tertile p {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+  }
+  .tertile p span {
+    font-family: "Old Standard TT", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+  }
+  .tertile .a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tertile .b {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tertile .c {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .information {
+    padding: 5rem 10rem 7rem 10rem;
+  }
+  .information h3 {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin-bottom: 2rem;
+  }
+  .information p {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+  }
+  .information .seemore {
+    bottom: 1.2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .tertile {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=creatures.css.map */
