@@ -40,7 +40,7 @@ ul {
 }
 .bg h1 {
   text-align: center;
-  color: white;
+  color: #F1EEE6;
 }
 .bg a {
   position: absolute;
@@ -223,6 +223,134 @@ h1 {
   transform: rotate(90deg);
 }
 
+.news {
+  background-color: #EDD9A9;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+.news .news-img img {
+  width: 100%;
+}
+.news h1 {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  color: #1E1C1C;
+  margin: 2rem 0;
+}
+.news hr {
+  width: 92%;
+  margin: 0 auto;
+  border-top: 8px solid #474242;
+  padding-top: 10px;
+  border-bottom: 5px solid #474242;
+}
+.news .news-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 4rem 0;
+}
+.news .news-content div:nth-child(1) {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+.news .news-content div:nth-child(2) {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.news .news-content div p {
+  width: 90%;
+  margin: 0 0 1rem 0;
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  text-align: center;
+}
+.news .news-content div p span {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 36px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.news .news-content div img {
+  width: 80vw;
+  margin: 0 1rem;
+}
+
+footer {
+  background-color: #1E1C1C;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+footer h3 {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 64px;
+}
+footer .footer-content {
+  width: 100%;
+}
+footer .footer-content .comment {
+  margin: 2rem auto;
+  width: 80%;
+}
+footer .footer-content .comment .user {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-content .comment .user div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-content .comment .user div a {
+  color: #F5F5F5;
+}
+footer .footer-content .comment .user div .profile {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 0.5rem;
+}
+footer .footer-content .comment p {
+  padding-left: 3rem;
+  margin-bottom: 0.5rem;
+}
+footer .footer-content .comment .comments-icons {
+  padding-left: 3rem;
+}
+footer .footer-content .comment .comments-icons img {
+  width: 30px;
+  margin: 0 0.25rem;
+}
+
 @media only screen and (min-width: 768px) {
   .title-banner h2 {
     padding: 52px 0;
@@ -263,6 +391,9 @@ h1 {
     justify-content: center;
     align-items: center;
   }
+  .tertile .b img {
+    margin: 2rem 1rem;
+  }
   .tertile .c {
     flex: 1;
     display: flex;
@@ -288,9 +419,63 @@ h1 {
   .information .seemore {
     bottom: 1.2rem;
   }
+  .news h1 {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px;
+    color: #1E1C1C;
+    margin: 2rem 0;
+  }
+  .news .news-content div img {
+    max-width: 500px;
+  }
 }
 @media only screen and (min-width: 992px) {
   .tertile {
     flex-direction: row;
+  }
+  .news h1 {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 128px;
+    color: #1E1C1C;
+    margin: 2rem 0;
+  }
+  .news .news-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4rem 0;
+  }
+  .news .news-content div:nth-child(1) {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+  .news .news-content div:nth-child(2) {
+    flex-direction: row;
+  }
+  .news .news-content div p {
+    width: 50%;
+    margin: 0 3rem;
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: start;
+  }
+  .news .news-content div p span {
+    font-family: "Old Standard TT", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .news .news-content div img {
+    width: 500px;
   }
 }/*# sourceMappingURL=creatures.css.map */

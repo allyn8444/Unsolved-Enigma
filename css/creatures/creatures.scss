@@ -1,7 +1,7 @@
 @import "../starters";
 
 
-@include hero-bg($color: white);
+@include hero-bg($color: $slider-title);
 
 h1 {
     font-family: 'Coluna', sans-serif;
@@ -122,9 +122,167 @@ h1 {
 }
 
 
+// news
+.news {
+    background-color: $old-paper;
+    height: fit-content;
+    width: 100%;
+
+    .news-img {
+
+        img {
+            width: 100%;
+
+        }
+    }
+
+    h1 {
+        @include unifraktur_font($size: 60);
+        color: $black;
+        margin: 2rem 0;
+    }
+
+    hr {
+        width: 92%;
+        margin: 0 auto;
+        border-top: 8px solid #474242;
+        padding-top: 10px;
+        border-bottom: 5px solid #474242;
+
+    }
+
+    .news-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 4rem 0;
+
+        div {
+            &:nth-child(1) {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 5rem;
+                // background-color: red;
+            }
+
+            &:nth-child(2) {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column-reverse;
+                // background-color: blue;
+            }
+
+            p {
+                width: 90%;
+                margin: 0 0 1rem 0;
+                @include old_standard_font($size: 24);
+                text-align: center;
+
+                span {
+                    @include old_standard_font($size: 36, $weight: 700);
+                    display: block;
+                    margin-bottom: 0.5rem;
+
+                }
+            }
+
+            img {
+
+                width: 80vw;
+                margin: 0 1rem;
+            }
+        }
+    }
+
+}
 
 
-// MEDIA QUERY 
+// comments
+footer {
+    background-color: $black;
+    width: 100%;
+    height: fit-content;
+    color: $white-text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 0;
+
+    h3 {
+        @include unifraktur_font($size: 64);
+
+    }
+
+    .footer-content {
+        width: 100%;
+
+        .comment {
+            // background-color: blue;
+            margin: 2rem auto;
+            width: 80%;
+
+
+            .user {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // background-color: red;
+
+                div {
+                    // background: greenyellow;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a {
+                        color: $white-text;
+                    }
+
+
+                    .profile {
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background-color: white;
+                        margin-right: 0.5rem;
+                    }
+                }
+
+
+            }
+
+            p {
+                // background-color: red;
+                padding-left: 3rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .comments-icons {
+                // background-color: green;
+                padding-left: 3rem;
+
+                img {
+                    width: 30px;
+                    margin: 0 0.25rem;
+                }
+            }
+
+        }
+    }
+}
+
+
+// ==================== MEDIA QUERY ================= \\  
 
 // tablet
 @media only screen and (min-width: 768px) {
@@ -168,6 +326,10 @@ h1 {
             justify-content: center;
             align-items: center;
 
+            img {
+                margin: 2rem 1rem;
+
+            }
 
         }
 
@@ -198,6 +360,25 @@ h1 {
             bottom: 1.2rem;
         }
     }
+
+    // news
+    .news {
+        h1 {
+            @include unifraktur_font($size: 90);
+            color: $black;
+            margin: 2rem 0;
+        }
+
+        .news-content {
+
+            div {
+
+                img {
+                    max-width: 500px;
+                }
+            }
+        }
+    }
 }
 
 // desktop
@@ -206,4 +387,56 @@ h1 {
     .tertile {
         flex-direction: row;
     }
+
+    // news
+    .news {
+        h1 {
+            @include unifraktur_font($size: 128);
+            color: $black;
+            margin: 2rem 0;
+        }
+
+        .news-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 4rem 0;
+
+            div {
+                &:nth-child(1) {
+
+                    flex-direction: row;
+                    margin-bottom: 0;
+
+                }
+
+                &:nth-child(2) {
+
+                    flex-direction: row;
+
+                }
+
+                p {
+                    width: 50%;
+                    margin: 0 3rem;
+                    @include old_standard_font($size: 24);
+                    text-align: start;
+
+                    span {
+                        @include old_standard_font($size: 36, $weight: 700);
+                        display: block;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                img {
+                    width: 500px;
+                }
+            }
+        }
+    }
+
+
 }

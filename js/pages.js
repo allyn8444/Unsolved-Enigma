@@ -1,7 +1,7 @@
 
 // play bgm
-const audio = new Audio('/assets/audio/bgm.mp3');
-audio.play();
+// const audio = new Audio('/assets/audio/bgm.mp3');
+// audio.play();
 
 
 const observer = new IntersectionObserver((entries) => {
