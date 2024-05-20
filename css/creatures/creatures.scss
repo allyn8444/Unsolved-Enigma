@@ -41,6 +41,7 @@ h1 {
         span {
             @include old_standard_font($size: 30, $weight: 700);
         }
+
     }
 
     .a {
@@ -190,6 +191,7 @@ h1 {
                     display: block;
                     margin-bottom: 0.5rem;
 
+
                 }
             }
 
@@ -272,6 +274,7 @@ footer {
                 padding-left: 3rem;
 
                 img {
+                    cursor: pointer;
                     width: 30px;
                     margin: 0 0.25rem;
                 }
@@ -280,6 +283,65 @@ footer {
         }
     }
 }
+
+// === DIFFERENT SECTION LAYOUT ==== \\ 
+.grid-container {
+    background-color: $old-paper;
+    padding: 2rem 1rem;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+        @include unifraktur_font($size: 40);
+        margin: 2rem 0;
+        text-align: center;
+
+    }
+
+
+
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Three columns by default */
+        gap: 10px;
+        width: 100%;
+
+
+        div {
+            // background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .grid-img {
+                max-width: 90%;
+                cursor: pointer;
+            }
+
+
+            p {
+                text-align: center;
+                margin: 0.5rem 1rem 1rem 1rem;
+                @include old_standard_font($size: 18);
+
+
+            }
+
+        }
+    }
+}
+
+.grid-hidden {
+    display: none;
+}
+
 
 
 // ==================== MEDIA QUERY ================= \\  
@@ -379,6 +441,30 @@ footer {
             }
         }
     }
+
+    // dynamic section
+    .grid-container {
+
+        h3 {
+            @include unifraktur_font($size: 48);
+            margin: 2rem 0;
+
+        }
+
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+            /* Two columns for medium screens */
+
+            div {
+
+                p {
+                    text-align: start;
+                }
+            }
+
+
+        }
+    }
 }
 
 // desktop
@@ -435,6 +521,25 @@ footer {
                     width: 500px;
                 }
             }
+        }
+    }
+
+    // dyanmic section
+    .grid-container {
+        .grid {
+
+            grid-template-columns: repeat(3, 1fr);
+
+            div {
+
+
+
+                img {
+                    max-width: 300px;
+
+                }
+            }
+
         }
     }
 

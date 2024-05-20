@@ -189,7 +189,8 @@ main {
 /* small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     main {
-        height: 100vh;
+        height: fit-content;
+        padding-bottom: 2rem;
 
         nav {
 
@@ -281,7 +282,7 @@ main {
             }
 
             .seemore {
-                margin-top: auto;
+                margin-top: 2.5rem;
                 animation: moveUpDown 2s ease-in-out infinite;
 
 

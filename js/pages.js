@@ -1,7 +1,32 @@
 
 // play bgm
-// const audio = new Audio('/assets/audio/bgm.mp3');
-// audio.play();
+const audio = new Audio('/assets/audio/bgm.mp3');
+audio.play();
+
+
+// Dynamic section hover effect
+const gridImgs = document.querySelectorAll(".grid-img");
+
+gridImgs.forEach((img) => {
+    img.addEventListener("mouseover", () => {
+        const gridInfo = img.nextElementSibling; // The <p> is the next sibling of the <img>
+        if (gridInfo && gridInfo.classList.contains("grid-hidden")) {
+            gridInfo.classList.remove("grid-hidden");
+
+        }
+        // img.style.backgroundColor = "blue";
+    });
+
+    img.addEventListener("mouseout", () => {
+        const gridInfo = img.nextElementSibling;
+        if (gridInfo && !gridInfo.classList.contains("grid-hidden")) {
+            gridInfo.classList.add("grid-hidden");
+
+            // img.style.backgroundColor = "yellow";
+        }
+    });
+});
+
 
 
 const observer = new IntersectionObserver((entries) => {

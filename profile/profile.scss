@@ -1,0 +1,126 @@
+@import "../css/starters";
+
+body {
+    background-color: $black;
+    position: relative;
+}
+
+
+
+section {
+    width: 80%;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 3rem 0;
+    font-family: 'Inter', sans-serif;
+
+    .user {
+        // background-color: red;
+        color: $white-text;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        margin: 0 0 3.5rem 0;
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+
+            span {
+                &:nth-child(1) {
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+            }
+
+        }
+
+        .profile {
+            display: inline-block;
+            max-width: 140px;
+            max-height: 140px;
+
+            min-width: 100px;
+            min-height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            margin-right: 1.5rem;
+        }
+
+
+
+
+    }
+
+    .navigation {
+        width: 95%;
+        margin: 0 auto;
+        // background-color: greenyellow;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: $white-text;
+        font-size: 20px;
+
+        span {
+            padding: 0.4rem 1rem;
+            margin: 0.3rem 0;
+
+            &:nth-child(1) {
+                border-bottom: 3px solid white;
+            }
+        }
+    }
+
+    .comment {
+        // background-color: blue;
+        background-color: $old-paper;
+        margin: 4rem auto;
+        width: 80%;
+        padding: 1.5rem 2rem;
+        border-radius: 20px;
+
+
+        .title {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            // background-color: red;
+
+            div {
+                // background: greenyellow;
+                font-size: 20px;
+                font-weight: 700;
+
+
+
+            }
+
+
+        }
+
+        p {
+            // background-color: red;
+            // padding-left: 3rem;
+            margin: 1rem 0;
+        }
+
+        .comments-icons {
+            display: flex;
+            justify-content: space-between;
+            // background-color: green;
+            // padding-left: 3rem;
+
+            img {
+                cursor: pointer;
+                width: 30px;
+                margin: 0 0.25rem;
+                filter: invert(1);
+            }
+        }
+
+    }
+}
