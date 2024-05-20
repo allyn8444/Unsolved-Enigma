@@ -168,7 +168,6 @@ h1 {
                 align-items: center;
                 flex-direction: column;
                 margin-bottom: 5rem;
-                // background-color: red;
             }
 
             &:nth-child(2) {
@@ -177,7 +176,6 @@ h1 {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column-reverse;
-                // background-color: blue;
             }
 
             p {
@@ -227,7 +225,6 @@ footer {
         width: 100%;
 
         .comment {
-            // background-color: blue;
             margin: 2rem auto;
             width: 80%;
 
@@ -237,10 +234,9 @@ footer {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                // background-color: red;
 
                 div {
-                    // background: greenyellow;
+
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -264,13 +260,12 @@ footer {
             }
 
             p {
-                // background-color: red;
                 padding-left: 3rem;
                 margin-bottom: 0.5rem;
             }
 
             .comments-icons {
-                // background-color: green;
+
                 padding-left: 3rem;
 
                 img {
@@ -308,13 +303,12 @@ footer {
     .grid {
         display: grid;
         grid-template-columns: 1fr;
-        /* Three columns by default */
         gap: 10px;
         width: 100%;
 
 
         div {
-            // background-color: red;
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -468,7 +462,6 @@ footer {
 }
 
 // desktop
-// tablet
 @media only screen and (min-width: 992px) {
     .tertile {
         flex-direction: row;

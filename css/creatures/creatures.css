@@ -375,7 +375,6 @@ footer .footer-content .comment .comments-icons img {
 .grid-container .grid {
   display: grid;
   grid-template-columns: 1fr;
-  /* Three columns by default */
   gap: 10px;
   width: 100%;
 }

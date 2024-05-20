@@ -1,7 +1,7 @@
-
-// play bgm
-const audio = new Audio('/assets/audio/bgm.mp3');
-audio.play();
+// autplay audio in index (direct way doesnt work)
+function autoplayAudio() {
+    document.querySelector('#bgm').play();
+}
 
 // =============== LIGHT EFFECTS ============= \\
 let pos = document.documentElement;

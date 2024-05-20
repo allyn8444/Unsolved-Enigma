@@ -15,10 +15,10 @@ section {
     font-family: 'Inter', sans-serif;
 
     .user {
-        // background-color: red;
+
         color: $white-text;
         display: flex;
-        // justify-content: center;
+
         align-items: center;
         margin: 0 0 3.5rem 0;
 
@@ -56,7 +56,7 @@ section {
     .navigation {
         width: 95%;
         margin: 0 auto;
-        // background-color: greenyellow;
+
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -74,7 +74,7 @@ section {
     }
 
     .comment {
-        // background-color: blue;
+
         background-color: $old-paper;
         margin: 4rem auto;
         width: 80%;
@@ -88,10 +88,10 @@ section {
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            // background-color: red;
+
 
             div {
-                // background: greenyellow;
+
                 font-size: 20px;
                 font-weight: 700;
 
@@ -103,16 +103,14 @@ section {
         }
 
         p {
-            // background-color: red;
-            // padding-left: 3rem;
+
             margin: 1rem 0;
         }
 
         .comments-icons {
             display: flex;
             justify-content: space-between;
-            // background-color: green;
-            // padding-left: 3rem;
+
 
             img {
                 cursor: pointer;
